@@ -39,6 +39,11 @@ p{
     font-family: 'Lucida Handwriting', cursive;
     font-size: 20px;
 }
+.title{
+    color: rgb(216, 195, 77);
+    font-family: 'Lucida Handwriting', cursive;
+    font-size: 30px;
+}
 .ranks{
     width: 70%;
     text-align: center;
@@ -153,6 +158,24 @@ p{
 }
 .intro a:hover{
     color: rgb(143, 126, 29);
+}
+.awards{
+    padding: 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+.awards::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+.awards img{
+    max-width: 40%;
+    min-width: 12%;
+    margin-right: 20px;
 }
 body{
     background: url(images/dark-hg.jpg) no-repeat;
