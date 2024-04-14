@@ -1,0 +1,291 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+p{
+    color: white;
+}
+.main{
+    height: 100vh;
+    position: relative;
+}
+.mainInfo{
+    border: 1px white solid;
+    border-radius: 10px;
+    padding: 15px;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: scroll;
+    width: 500px;
+    max-height: 91%;
+    float: left;
+    margin: 2%;
+}
+.mainCover{
+    display: block;
+    margin: auto;
+    width: 40%;
+}
+.mainInfo p{
+    line-height: 30px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.question{
+    color: rgb(216, 195, 77);
+    font-family: 'Lucida Handwriting', cursive;
+    font-size: 20px;
+}
+.ranks{
+    width: 70%;
+    text-align: center;
+}
+.review{
+    text-align: left;
+    width: 70%;
+}
+.signature{
+    float: right;
+}
+.flashCard{
+    color: white;
+    border: 1px white solid;
+    padding: 15px;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+    width: 90%;
+    margin-bottom: 20px;
+    transition: 0.5s;
+}
+.flashCard:hover{
+    scale: 1.07;
+    box-shadow: 2px 4px 8px rgb(216, 195, 77);
+}
+.flashCard img{
+    float: left;
+    margin-right: 10px;
+    border-radius: 10px;
+    width: 40%;
+}
+.flashCard img:hover{
+    filter: contrast(1.15);
+}
+.flashCard h1 a{
+    font-family: 'Lucida Handwriting', cursive;
+    color: rgb(216, 195, 77);
+}.flashCard h1 a:hover{
+    color: rgb(143, 126, 29);
+}
+.flashCard::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.sideInfo{
+    border: 1px white solid;
+    border-radius: 10px;
+    padding: 15px;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    position: -webkit-sticky; /* sticky for safari */
+    position: sticky;
+    top: 0px;
+    width: 200px;
+    max-height: 50%;
+    overflow: scroll;
+    float: left;
+    margin: 2%;
+    line-height: 30px;
+}
+.sideInfo a{
+    font-family: 'Lucida Handwriting', cursive;
+    color: rgb(216, 195, 77);
+}
+.sideInfo a:hover{
+    color: rgb(143, 126, 29);
+}
+.logo img{
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 25px;
+    width: 200px;
+    height: 200px;
+}
+.intro{
+    border: 1px white solid;
+    border-radius: 10px;
+    padding: 15px;
+    margin-right: 10px;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    margin-bottom: 10px;
+    width: 80%;
+
+}
+.intro::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+.intro img{
+    width: 150px;
+    float: left;
+    margin-right: 20px;
+}
+.intro h2{
+    color: white;
+}
+.intro a{
+    display: block;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    color: rgb(216, 195, 77);
+    font-family: 'Lucida Handwriting', cursive;
+}
+.intro a:hover{
+    color: rgb(143, 126, 29);
+}
+body{
+    background: url(images/dark-hg.jpg) no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+}
+nav{
+    z-index: 11;
+    position: fixed;
+    left: -200px;
+    width: 250px;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    height: 100%;
+    transition: all 0.5s ease;
+}
+nav .head{
+    line-height: 70px;
+    color: white;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    user-select: none;
+}
+nav ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 60px;
+    color: white;
+    font-size: 20px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid black;
+    transition: .4s;
+}
+nav ul a:hover{
+    padding-left: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+nav ul i{
+    padding-right: 15px;
+    float: right;
+    position: relative;
+    top: 20px;
+}
+nav ul #selected{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+#check{
+    display: none;
+}
+label #open, label #close{
+    position: fixed;
+    top: 0;
+    cursor: pointer;
+    border-radius: 10px;
+}
+label #open{
+    z-index: 1111;
+    top: 10px;
+    font-size: 30px;
+    color: white;
+    padding: 6px 12px;
+    transition: all 0.5s;
+}
+label #close{
+    z-index: 1111;
+    left: -195px;
+    top: 16px;
+    font-size: 30px;
+    color: white;
+    padding: 4px 9px;
+    transition: all 0.5s;
+}
+#check:checked ~ nav{
+    left: 0;
+}
+#check:checked ~ label #open{
+    opacity: 0;
+    pointer-events: none;
+}
+#check:checked ~ nav ul i{
+    float: left;
+}
+#check:checked ~ label #close{
+    left: 0px;
+}
+
+.content{
+    margin-left: 60px;
+}
+.header{
+    color: white;
+    text-align: center;
+    line-height: 50px;
+}
+
+/* For Mobile default option in case none of the below sized are used */
+[class*="col-"]{
+    width: 85%;
+}
+
+/* Tablet size control */
+@media only screen and (min-width: 600px){
+    .col-s-1{width: 8.33%;}
+    .col-s-2{width: 16.66%;}
+    .col-s-3{width: 25%;}
+    .col-s-4{width: 33.33%;}
+    .col-s-5{width: 41.66%;}
+    .col-s-6{width: 50%;}
+    .col-s-7{width: 58.33%;}
+    .col-s-8{width: 66.66%;}
+    .col-s-9{width: 75%;}
+    .col-s-10{width: 83.33%;}
+    .col-s-11{width: 91.66%;}
+    .col-s-12{width: 100%;}
+}
+
+/* Desktop size control */
+@media only screen and (min-width: 800px){
+    .col-1{width: 8.33%;}
+    .col-2{width: 16.66%;}
+    .col-3{width: 25%;}
+    .col-4{width: 33.33%;}
+    .col-5{width: 41.66%;}
+    .col-6{width: 50%;}
+    .col-7{width: 58.33%;}
+    .col-8{width: 66.66%;}
+    .col-9{width: 75%;}
+    .col-10{width: 83.33%;}
+    .col-11{width: 91.66%;}
+    .col-12{width: 100%;}
+}
