@@ -33,7 +33,7 @@ icon.addEventListener("click", () => {
 //     }
 // }
 
-const book = document.getElementById("selected");
+const book = document.getElementById("book");
 const address = document.getElementById("address");
 const email = document.getElementById("email");
 const shipping = document.getElementById("fast");
