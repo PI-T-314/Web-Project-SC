@@ -1,3 +1,18 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('show_comments')) {
+        let infoSections = document.getElementsByClassName("infoSection");
+        let cmntSections = document.getElementsByClassName("cmntSection");
+
+        for (let i = 0; i < infoSections.length; i++) {
+            infoSections[i].style.display = "none";
+        }
+        for (let i = 0; i < cmntSections.length; i++) {
+            cmntSections[i].style.display = "block";
+        }
+    }
+});
+
 let lightTheme = localStorage.getItem('lightTheme');
 const icon = document.getElementById("icon");
 
@@ -102,7 +117,34 @@ document.getElementById("buy").addEventListener("click", () => {
         row.appendChild(priceCol);
         table.appendChild(row);
 
+        address.value = "";
+        email.value = "";
+        buyerName.value = "";
         
         console.log(price);
     }
 })
+
+function showInfo() {
+    let infoSections = document.getElementsByClassName("infoSection");
+    let cmntSections = document.getElementsByClassName("cmntSection");
+
+    for (let i = 0; i < infoSections.length; i++) {
+        infoSections[i].style.display = "block";
+    }
+    for (let i = 0; i < cmntSections.length; i++) {
+        cmntSections[i].style.display = "none";
+    }
+}
+
+function showCmnts() {
+    let infoSections = document.getElementsByClassName("infoSection");
+    let cmntSections = document.getElementsByClassName("cmntSection");
+
+    for (let i = 0; i < infoSections.length; i++) {
+        infoSections[i].style.display = "none";
+    }
+    for (let i = 0; i < cmntSections.length; i++) {
+        cmntSections[i].style.display = "block";
+    }
+}
